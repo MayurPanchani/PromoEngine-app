@@ -1,9 +1,10 @@
-﻿using System.Threading.Tasks;
+﻿using PromotionEngine.Entities;
+using System.Threading.Tasks;
 
 namespace CodeTest.Interfaces
 {
     public interface IPromotionService
-    {
-        public Task<int> ApplyPromotion();
+    {               
+        public Task<decimal> GetCartPriceWithPromotion(Cart cartList);
     }
 }

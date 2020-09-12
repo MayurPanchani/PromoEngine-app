@@ -16,6 +16,10 @@
             GetAllPromotions();
         }
 
+        /// <summary>
+        /// Get all active promotions from the database, For test
+        /// we can do add/update promotion in database using front end.
+        /// </summary>
         private void GetAllPromotions()
         {
             _promotions = new List<Promotion>()
@@ -28,14 +32,14 @@
                     PromotionID =2 , PromotionName ="2 Of B's" , Description = "2 Of B's for 45 " , IsActive =true  ,
                      PromotionTermsCondition =   new PromotionTerms () { ProductSKU ="B" , Quantity =2 , PromotionalPrice =45}
                 },
-                 new CombinedPromotion () {
-                    PromotionID =3 , PromotionName =" C & D " , Description = "C & D for 30 " , IsActive =true ,
-                     PromotionTermsConditionList = new List<PromotionTerms>()
-                     {
-                         new PromotionTerms () { ProductSKU ="C" , Quantity = 1  ,PromotionalPrice =0},
-                         new PromotionTerms () { ProductSKU ="D" , Quantity = 1 , PromotionalPrice =  30 }
-                     }
-                 }
+                new CombinedPromotion () {
+                PromotionID =3 , PromotionName =" C & D " , Description = "C & D for 30 " , IsActive =true ,
+                    PromotionTermsConditionList = new List<PromotionTerms>()
+                    {
+                        new PromotionTerms () { ProductSKU ="C" , Quantity = 1  ,PromotionalPrice =0},
+                        new PromotionTerms () { ProductSKU ="D" , Quantity = 1 , PromotionalPrice =  30 }
+                    }
+                }
             };
 
         }

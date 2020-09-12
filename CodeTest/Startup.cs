@@ -4,7 +4,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using CodeTest.Interfaces;
-
+using PromotionEngine.Interfaces;
+using PromotionEngine.Entities;
 
 namespace CodeTest
 {
@@ -20,7 +21,7 @@ namespace CodeTest
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddScoped<IPromotionService, PromotionService>();
+            services.AddScoped<IPromotionService, PromotionService>();            
             services.AddControllers();
         }
 

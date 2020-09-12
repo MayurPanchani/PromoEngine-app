@@ -4,7 +4,7 @@
     public interface ICart
     {
         decimal CartAmount { get; set; }
-        void ApplyPromotions();
+        decimal CalculatePromotionOnCardValue();
         void AddProduct(Product product, int quantity);
     }
 }
