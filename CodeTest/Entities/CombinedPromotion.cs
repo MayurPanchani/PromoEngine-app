@@ -12,5 +12,10 @@ namespace PromotionEngine.Entities
     {
         //This Property will have terms and condition for combined promotion
         public List<PromotionTerms> PromotionTermsConditionList { get; set; }
+
+        public override void ApplyPromotion(Cart cartList)
+        {
+            
+        }
     }
 }

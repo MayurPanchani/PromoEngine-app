@@ -17,5 +17,7 @@ namespace PromotionEngine.Entities
         public string Description { get; set; }
 
         public bool IsActive { get; set; }
+
+        public abstract void ApplyPromotion(Cart cart);
     }
 }

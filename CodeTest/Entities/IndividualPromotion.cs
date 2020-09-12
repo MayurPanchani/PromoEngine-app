@@ -12,5 +12,10 @@ namespace PromotionEngine.Entities
     {
         //This Property will have terms and condition for Individual SKU promotion 
         public PromotionTerms PromotionTermsCondition { get; set; }
+
+        public override void ApplyPromotion(Cart cartList)
+        {
+
+        }
     }
 }
