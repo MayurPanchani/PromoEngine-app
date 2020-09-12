@@ -2,6 +2,7 @@
 {
     using PromotionEngine.Entities;
     using System.Collections.Generic;
+    using System.Linq;
 
     public class PromotionRepository
     {
@@ -38,6 +39,13 @@
             };
 
         }
+
+        public List<Promotion> GetActivePromotions()
+        {
+            var filteredRules = _promotions.Where(r => r.IsActive == true).ToList();
+            return filteredRules;
+        }
+
 
     }
 }
